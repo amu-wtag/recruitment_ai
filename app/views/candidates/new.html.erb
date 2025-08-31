@@ -1,0 +1,24 @@
+<div class="max-w-md mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">Add Candidate</h1>
+
+  <%= form_with model: @candidate, local: true, class: "space-y-4" do |f| %>
+    <div>
+      <%= f.label :name, class: "block font-medium" %>
+      <%= f.text_field :name, class: "mt-1 block w-full border rounded px-2 py-1" %>
+    </div>
+
+    <div>
+      <%= f.label :github_username, class: "block font-medium" %>
+      <%= f.text_field :github_username, class: "mt-1 block w-full border rounded px-2 py-1" %>
+    </div>
+
+    <div>
+      <%= f.label :resume, class: "block font-medium" %>
+      <%= f.file_field :resume, class: "mt-1 block w-full" %>
+    </div>
+
+    <div>
+      <%= f.submit "Add Candidate", class: "bg-blue-500 text-white px-4 py-2 rounded" %>
+    </div>
+  <% end %>
+</div>
